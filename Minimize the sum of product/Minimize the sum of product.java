@@ -1,0 +1,13 @@
+class Solution {
+
+    public long minValue(long a[], long b[], long n) 
+    {
+        Arrays.sort(a);
+        Arrays.sort(b);
+        long sum=0;
+        for(int i=0;i<n;i++){
+           sum += (a[i]*b[(int)n-i-1]);
+        }
+        return sum;
+    }
+}
